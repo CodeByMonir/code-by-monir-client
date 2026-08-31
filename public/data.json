@@ -1,0 +1,254 @@
+[
+  {
+    "id": "12",
+    "title": "MediCare Connect",
+    "category": "fullstack",
+    "description": "Full-stack healthcare service platform built with Next.js, featuring appointment booking, patient management, doctor profiles, and secure user authentication with a modern, responsive interface.",
+    "tech": [
+      {
+        "name": "Next.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/5XHr5t74/Medi-Care-All.png",
+    "liveLink": "https://medi-care-client-6fx8.vercel.app/",
+    "githubLink": "https://github.com/CodeByMonir/medi_care_client"
+  },
+  {
+    "id": "11",
+    "title": "Rent Cars",
+    "category": "fullstack",
+    "description": "Full-stack Car Rental Platform built with modern web technologies, featuring car booking, user authentication, listing management, and responsive design.",
+    "tech": [
+      {
+        "name": "Next.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/Gv84Qhzq/Rent-ACar.png",
+    "liveLink": "https://car-rental-client-eight-opal.vercel.app/",
+    "githubLink": "https://github.com/CodeByMonir/carrental-client"
+  },
+  {
+    "id": "10",
+    "title": "Sun Cart Mall",
+    "category": "fullstack",
+    "description": "Modern e-commerce web app built with Next.js featuring cart management, product filtering, and secure checkout.",
+    "tech": [
+      {
+        "name": "Next.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/4ZT7KRH7/Suncart-Mall.png",
+    "liveLink": "https://suncart-mall.vercel.app/",
+    "githubLink": "https://github.com/CodeByMonir/suncart-mall"
+  },
+  {
+    "id": "9",
+    "title": "GitHub Issue Tracker",
+    "category": "frontend",
+    "description": "This website is a GitHub Issues Tracker designed to help teams track and manage project tasks and bugs. Based on the current view, it displays a total of 50 issues organized into a card-based layout.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/ynkDkWPy/Git-Hub-Issue-Tracker.png",
+    "liveLink": "https://gihubissuetracker.netlify.app/",
+    "githubLink": "https://github.com/CodeByMonir/GithubIssueTracker"
+  },
+  {
+    "id": "8",
+    "title": "Keen Keeper",
+    "category": "frontend",
+    "description": "KeenKeeper is a personal relationship management platform designed to help users track, cultivate, and maintain meaningful social connections.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/DHRX45Z9/Keen-Keeper-Temp.png",
+    "liveLink": "https://keen-keeper-ruddy.vercel.app/",
+    "githubLink": "https://github.com/CodeByMonir/keenkeeper"
+  },
+  {
+    "id": "7",
+    "title": "Monir Hossen Portfolio",
+    "category": "frontend",
+    "description": "Personal portfolio with modern UI design, smooth animations, and responsive layout showcasing my work.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "https://i.ibb.co.com/YF1QcDCz/My-Port-Tamp.png",
+    "liveLink": "https://portfolio-demo.com",
+    "githubLink": "https://github.com/username/portfolio"
+  },
+  {
+    "id": "6",
+    "title": "Task Manager",
+    "category": "fullstack",
+    "description": "Full-stack task management app with drag-and-drop functionality, real-time updates, and team collaboration.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://taskmanager-demo.com",
+    "githubLink": "https://github.com/username/taskmanager"
+  },
+  {
+    "id": "5",
+    "title": "Weather App",
+    "category": "frontend",
+    "description": "Real-time weather application with location detection, 5-day forecast, and interactive weather maps.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "CSS",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://weather-demo.com",
+    "githubLink": "https://github.com/username/weather-app"
+  },
+  {
+    "id": "4",
+    "title": "API Gateway",
+    "category": "backend",
+    "description": "Scalable API gateway with rate limiting, request logging, and microservice orchestration.",
+    "tech": [
+      {
+        "name": "Node.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "Express",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://api-demo.com",
+    "githubLink": "https://github.com/username/api-gateway"
+  },
+  {
+    "id": "3",
+    "title": "Chat Application",
+    "category": "fullstack",
+    "description": "Real-time chat app with socket.io, user presence, and message history.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Node.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "name": "Socket.io",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://chat-demo.com",
+    "githubLink": "https://github.com/username/chat-app"
+  },
+  {
+    "id": "2",
+    "title": "Blog Platform",
+    "category": "fullstack",
+    "description": "Full-featured blogging platform with markdown support, comments, and user profiles.",
+    "tech": [
+      {
+        "name": "Next.js",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+      },
+      {
+        "name": "MongoDB",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://blog-demo.com",
+    "githubLink": "https://github.com/username/blog-platform"
+  },
+  {
+    "id": "1",
+    "title": "Analytics Dashboard",
+    "category": "frontend",
+    "description": "Interactive dashboard with charts, data visualization, and real-time analytics.",
+    "tech": [
+      {
+        "name": "React",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+      },
+      {
+        "name": "Tailwind",
+        "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+      }
+    ],
+    "image": "",
+    "liveLink": "https://dashboard-demo.com",
+    "githubLink": "https://github.com/username/dashboard"
+  }
+]
