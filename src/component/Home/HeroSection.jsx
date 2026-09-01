@@ -182,21 +182,12 @@ export default function HeroSection() {
                         {/* Action Buttons & Socials */}
                         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 items-center pt-4 justify-center md:justify-start">
                             {/* Download Resume Button */}
-                            <div className="w-full flex flex-col gap-4">
-
-                                <a
+                            <a
                                 href="/Monir_Hossen_Mern_Resume.pdf"
                                 download="Monir_Hossen_Mern_Resume.pdf"
                                 className="w-full sm:w-auto px-6 py-3 rounded-xl  bg-slate-50 dark:bg-slate-900/60 dark:text-slate-300 text-slate-700 font-medium border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 transition-all hover:bg-slate-50 hover:text-indigo-600 hover:scale-110 dark:hover:bg-slate-800/50 dark:hover:text-indigo-400 active:scale-95 cursor-pointer shadow-sm"
-                                >Resume <FiDownload />
-                                </a>
-                                <a
-                                    href="/CertificateOfMonirHossen.pdf"
-                                    download="CertificateOfMonirHossen.pdf"
-                                className="w-full sm:w-auto px-6 py-3 rounded-xl  bg-slate-50 dark:bg-slate-900/60 dark:text-slate-300 text-slate-700 font-medium border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 transition-all hover:bg-slate-50 hover:text-indigo-600 hover:scale-110 dark:hover:bg-slate-800/50 dark:hover:text-indigo-400 active:scale-95 cursor-pointer shadow-sm"
-                                >Certificate <FiDownload />
-                                </a>
-                            </div>
+                            >Resume <FiDownload />
+                            </a>
 
                             {/* Social Links */}
                             <div className="flex gap-3">
