@@ -7,4 +7,5 @@ export const assets = [
   "/sitemap-0.xml",
   "/sitemap.xml",
   "/Monir_Hossen_Mern_Resume.pdf",
+  "/CertificateOfMonirHossen.pdf"
 ];
