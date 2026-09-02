@@ -181,7 +181,7 @@ export default function About() {
         <motion.section
             id="about"
             ref={sectionRef}
-            className="relative overflow-hidden py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-colors duration-300"
+            className="relative py-16 sm:py-20 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-colors duration-300"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}
