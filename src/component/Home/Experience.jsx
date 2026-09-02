@@ -118,7 +118,7 @@ export default function Experience() {
         <section
             ref={sectionRef}
             id="experience"
-            className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden transition-colors duration-300"
+            className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-colors duration-300"
         >
             <div className="hidden">
                 <h1>Professional Experience | Full Stack Developer Portfolio</h1>
