@@ -267,6 +267,13 @@ export default function Footer() {
                         </p>
                     </div>
 
+                    <a
+                        href="/CertificateOfMonirHossen.pdf"
+                        className="px-2.5 py-1 text-xs rounded-full border border-sky-500/10 text-slate-500 dark:text-slate-400 bg-sky-500/5 transition-all duration-300 hover:scale-105 hover:border-sky-400 hover:text-sky-600 dark:hover:text-sky-400 hover:bg-sky-500/10"
+                    >
+                        Certification
+                    </a>
+
                     {/* Social Links */}
                     <div className="flex gap-3">
                         {SOCIAL_LINKS.map((social) => (
