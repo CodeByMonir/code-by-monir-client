@@ -133,7 +133,7 @@ export default function SkillsPage() {
     };
 
     return (
-        <section className="relative py-16 md:py-24 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-transparent text-slate-700 dark:text-slate-100 transition-colors duration-300">
+        <section className="relative overflow-hidden py-16 md:py-24 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-transparent text-slate-700 dark:text-slate-100 transition-colors duration-300">
             {/* Ambient Background Particles */}
             {mounted && (
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">

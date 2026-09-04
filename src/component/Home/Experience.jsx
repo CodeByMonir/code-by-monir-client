@@ -13,6 +13,34 @@ export default function Experience() {
     const experiences = [
         {
             id: 0,
+            title: "MediCare Connect",
+            company: "Healthcare Platform",
+            period: "June 2024 - Present",
+            location: "Remote",
+            type: "Full Stack Project",
+            description: [
+                "Developed a full-stack healthcare platform connecting patients, doctors, and clinic administrators.",
+                "Implemented appointment scheduling and real-time doctor availability management.",
+                "Created personalized dashboards for managing patient records, prescriptions, and visit histories.",
+                "Built secure authentication and role-based access control for patients and medical staff.",
+                "Designed a modern, responsive UI with Tailwind CSS optimized for desktop and mobile devices.",
+            ],
+            techStack: [
+                { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", color: "#FFFFFF" },
+                { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", color: "#47A248" },
+                { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", color: "#06B6D4" },
+            ],
+            image: "https://i.ibb.co.com/5XHr5t74/Medi-Care-All.png",
+            liveLink: "https://medi-care-client-6fx8.vercel.app/",
+            githubLink: "https://github.com/CodeByMonir/medi_care_client",
+            achievements: [
+                "🩺 Multi-role appointment & doctor management system",
+                "⚡ Seamless client-side transitions and fast SSR loads",
+                "🔒 Secure patient record and profile handling",
+            ],
+        },
+        {
+            id: 1,
             title: "Rent Cars Web App",
             company: "Full Stack Development",
             period: "July 2024 - Present",
@@ -43,7 +71,7 @@ export default function Experience() {
             ],
         },
         {
-            id: 1,
+            id: 2,
             title: "Sun Cart Mall Web App",
             company: "E-Commerce Development",
             period: "March 2024 - Present",
@@ -73,36 +101,7 @@ export default function Experience() {
                 "⭐ 4.8/5 user rating",
             ],
         },
-        {
-            id: 2,
-            title: "Monir Hossen Portfolio",
-            company: "Personal Brand Development",
-            period: "January 2024 - Present",
-            location: "Remote",
-            type: "Frontend Development",
-            description: [
-                "Designed and developed personal portfolio website showcasing skills and projects.",
-                "Implemented smooth animations and transitions using Framer Motion.",
-                "Created responsive design that works seamlessly on all devices.",
-                "Optimized SEO with meta tags, semantic HTML, and performance improvements.",
-                "Integrated contact form with EmailJS for direct messaging functionality.",
-                "Added particle background effect for enhanced visual appeal.",
-            ],
-            techStack: [
-                { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", color: "#FFFFFF" },
-                { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg", color: "#06B6D4" },
-                { name: "Framer Motion", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/framermotion/framermotion-original.svg", color: "#0055FF" },
-                { name: "EmailJS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", color: "#F7DF1E" },
-            ],
-            image: "https://i.ibb.co.com/YF1QcDCz/My-Port-Tamp.png",
-            liveLink: "https://codebymonir.vercel.app/",
-            githubLink: "https://github.com/CodeByMonir/portfolio",
-            achievements: [
-                "🎯 99% Lighthouse performance score",
-                "📱 Fully responsive design",
-                "🔍 Optimized SEO ranking",
-            ],
-        },
+        
     ];
 
     const itemVariants = {
@@ -118,7 +117,7 @@ export default function Experience() {
         <section
             ref={sectionRef}
             id="experience"
-            className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-colors duration-300"
+            className="relative overflow-hidden py-16 md:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-colors duration-300"
         >
             <div className="hidden">
                 <h1>Professional Experience | Full Stack Developer Portfolio</h1>
