@@ -2,7 +2,7 @@ import ColorPaletteManager from '@/component/Features/ColerPaletteManager';
 import React from 'react';
 
 export const metadata = {
-    title: "Color Palette Manager | CodeByMonir",
+    title: "Color Palette Manager | Monir Hossen",
     description: "A simple React-based color palette manager that allows users to input, validate, and preview colors in various formats (Hex, RGB, HSL).",
 };
 

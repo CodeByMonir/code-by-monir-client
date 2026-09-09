@@ -2,7 +2,7 @@ import ProjectsPage from '@/component/projects/page';
 import React from 'react';
 
 export const metadata = {
-    title: "Projects | CodeByMonir",
+    title: "Projects | Monir Hossen",
     description: "A collection of projects showcasing various web development skills and technologies.",
 };
 
