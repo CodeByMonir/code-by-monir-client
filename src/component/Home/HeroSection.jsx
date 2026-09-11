@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Home } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { FaJs, FaReact } from "react-icons/fa";
@@ -53,13 +54,20 @@ export default function HeroSection() {
         <section className="w-full mt-20 flex flex-col items-center justify-center px-6 pb-12">
 
 
-            <motion.div
-                className="inline-block px-4 py-1 rounded-full mt-2 mb-4 md:mb-16 text-sm font-medium bg-sky-500/10 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 border border-sky-500/20 dark:border-sky-500/30"
-                animate={{ scale: [1, 1.03, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-            >
-                Code By Monir
-            </motion.div>
+            <div className="mt-2 mb-4 md:mb-16 ">
+                <motion.div
+                    className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-sky-500/10 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 border border-sky-500/20 dark:border-sky-500/30"
+                    animate={{ scale: [1, 1.03, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                >
+                    <div className="flex items-center gap-2">
+                        <Home className="w-4 h-4" /> Code By Monir
+                    </div>
+                </motion.div>
+                <motion.div
+                    className="mx-auto mt-4 h-1 w-20 sm:w-24 rounded-full bg-linear-to-r from-sky-400 to-blue-500 shadow-sm"
+                />
+            </div>
 
             <h1 className="hidden">Monir Hossen</h1>
 

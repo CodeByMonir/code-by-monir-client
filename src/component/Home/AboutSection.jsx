@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { User } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -218,14 +219,14 @@ export default function About() {
                     animate={{ scale: [1, 1.03, 1] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    <span>✨</span> Get to Know Me
+                    <User className="w-4 h-4" /> Get to Know Me
                 </motion.div>
 
                 <motion.h2
                     className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"
                     variants={itemVariants}
                 >
-                    <span className="bg-gradient-to-r from-sky-400 via-sky-500 to-blue-500 bg-clip-text text-transparent">
+                    <span className="bg-linear-to-r from-sky-400 via-sky-500 to-blue-500 bg-clip-text text-transparent">
                         About
                     </span>
                     <span className="text-slate-900 dark:text-slate-100"> Me</span>
@@ -240,7 +241,7 @@ export default function About() {
 
                 <motion.div
                     variants={itemVariants}
-                    className="mx-auto mt-4 h-1 w-20 sm:w-24 rounded-full bg-gradient-to-r from-sky-400 to-blue-500 shadow-sm"
+                    className="mx-auto mt-4 h-1 w-20 sm:w-24 rounded-full bg-linear-to-r from-sky-400 to-blue-500 shadow-sm"
                 />
             </div>
 

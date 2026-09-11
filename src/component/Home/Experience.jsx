@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import { Briefcase } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
 
@@ -141,13 +142,13 @@ export default function Experience() {
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
             >
-                <motion.span
-                    className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase bg-sky-500/10 dark:bg-sky-500/15 text-sky-600 dark:text-sky-400 border border-sky-500/20 dark:border-sky-500/30 backdrop-blur-sm"
+                <motion.div
+                    className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide bg-sky-500/10 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 border border-sky-500/20 dark:border-sky-500/30 mb-4 shadow-sm backdrop-blur-sm"
                     animate={{ scale: [1, 1.03, 1] }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
-                    Professional Journey
-                </motion.span>
+                    <Briefcase className="w-4 h-4" /> Professional Journey
+                </motion.div>
 
                 <motion.h2
                     className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"
