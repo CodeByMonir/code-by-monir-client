@@ -188,7 +188,7 @@ export default function Contact() {
     return (
         <motion.section
             ref={sectionRef}
-            className="py-16 md:py-20 px-4 sm:px-6 md:px-20 bg-transparent relative"
+            className="overflow-hidden py-16 md:py-20 px-4 sm:px-6 md:px-20 bg-transparent relative"
             id="contact"
             initial="hidden"
             whileInView="visible"

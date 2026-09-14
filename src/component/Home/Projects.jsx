@@ -174,7 +174,7 @@ export default function Projects() {
         <motion.section
             ref={sectionRef}
             id="projects-section"
-            className="py-16 md:py-20 px-4 sm:px-6 md:px-20 bg-transparent text-slate-900 dark:text-slate-100 relative min-h-screen transition-colors duration-300"
+            className="py-16 md:py-20 px-4 sm:px-6 md:px-20 bg-transparent text-slate-900 dark:text-slate-100 relative min-h-screen transition-colors duration-300 overflow-hidden"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.15 }}

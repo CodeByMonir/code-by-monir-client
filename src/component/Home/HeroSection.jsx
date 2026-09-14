@@ -51,7 +51,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="w-full mt-20 flex flex-col items-center justify-center px-6 pb-12">
+        <section className="w-full mt-20 flex flex-col items-center justify-center px-6 pb-12 overflow-hidden">
 
 
             <div className="mt-2 mb-4 md:mb-16 ">
