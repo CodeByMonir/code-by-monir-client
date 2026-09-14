@@ -272,7 +272,7 @@ export default function About() {
                         <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 dark:border-sky-400/20 bg-white/70 dark:bg-slate-900/80 shadow-xl backdrop-blur-md">
                             <Image
                                 src="/about-image.webp"
-                                alt="Monir Hossen - Full Stack Web Developer"
+                                alt="Monir Hossen | Code By Monir | MERN Stack Developer | Full Stack Web Developer"
                                 width={800}
                                 height={800}
                                 className="w-full h-auto object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"

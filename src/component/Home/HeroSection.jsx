@@ -99,7 +99,7 @@ export default function HeroSection() {
                             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden dark:bg-gray-900 bg-indigo-50 shadow-2xl z-10">
                                 <Image
                                     src="/profile.webp"
-                                    alt="Monir Hossen"
+                                    alt="Monir Hossen | Code By Monir | MERN Stack Developer | Full Stack Web Developer"
                                     height={958}
                                     width={958}
                                     className="drop-shadow-2xl w-full h-full object-cover transition-all duration-500 ease-in-out transform hover:scale-105"
