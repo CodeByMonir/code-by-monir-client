@@ -1,14 +1,17 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Home } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Eye, Home, X } from "lucide-react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaJs, FaReact } from "react-icons/fa";
 import { FiDownload, FiFacebook, FiGithub, FiLinkedin } from "react-icons/fi";
 import { SiTailwindcss } from "react-icons/si";
 
 export default function HeroSection() {
+    const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
+    const resumePath = "/Monir_Hossen_Mern_Resume.pdf";
+
     // Reference to target the border element directly with vanilla JS
     const borderRef = useRef(null);
 
@@ -23,13 +26,13 @@ export default function HeroSection() {
                 { transform: "translate(-50%, -50%) rotate(0deg)" } // 360 to 0 = Counter-Clockwise
             ],
             {
-                duration: 4000, // 4 seconds per full loop
+                duration: 4000,
                 iterations: Infinity,
                 easing: "linear"
             }
         );
 
-        return () => animation.cancel(); // Clean up animation on unmount
+        return () => animation.cancel();
     }, []);
 
     // Framer Motion Animations for layout entry
@@ -51,10 +54,8 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="w-full mt-20 flex flex-col items-center justify-center px-6 pb-12 overflow-hidden">
-
-
-            <div className="mt-2 mb-4 md:mb-16 ">
+        <section className="w-full mt-20 flex flex-col items-center justify-center px-6 pb-12 overflow-hidden relative">
+            <div className="mt-2 mb-4 md:mb-16">
                 <motion.div
                     className="inline-block px-4 py-1 rounded-full text-sm font-medium bg-sky-500/10 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400 border border-sky-500/20 dark:border-sky-500/30"
                     animate={{ scale: [1, 1.03, 1] }}
@@ -72,7 +73,6 @@ export default function HeroSection() {
             <h1 className="hidden">Monir Hossen</h1>
 
             <div>
-
                 {/* Container: Balanced 50/50 Desktop Grid */}
                 <motion.div
                     variants={containerVariants}
@@ -80,22 +80,18 @@ export default function HeroSection() {
                     animate="visible"
                     className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
                 >
-
                     {/* 🚀 Left Side: Profile Image with Moving RGB Gradient */}
                     <motion.div
                         variants={fadeInUp}
                         className="flex justify-center order-1 md:order-1"
                     >
                         <div className="relative group p-0.75 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800">
-
-                            {/* 🔄 JavaScript Driven RGB Light Effect (Centered & Spinning) */}
                             <div
                                 ref={borderRef}
                                 className="absolute top-1/2 left-1/2 w-[150%] h-[150%] bg-[conic-gradient(#f00,#0f0,#00f,#f00)] opacity-80 group-hover:opacity-100 transition duration-500 rounded-2xl blur-[2px]"
                                 style={{ transform: "translate(-50%, -50%)" }}
                             />
 
-                            {/* The Actual Image Frame */}
                             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden dark:bg-gray-900 bg-indigo-50 shadow-2xl z-10">
                                 <Image
                                     src="/profile.webp"
@@ -119,7 +115,6 @@ export default function HeroSection() {
                             variants={fadeInUp}
                             className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-100 dark:border-indigo-900/50 shadow-sm"
                         >
-                            {/* Pulsing Status Dot */}
                             <div className="relative flex h-4 w-4 items-center justify-center">
                                 <motion.span
                                     className="absolute inline-flex h-full w-full rounded-full bg-[#ff6b6b]"
@@ -130,7 +125,6 @@ export default function HeroSection() {
                                 <span className="relative h-1.5 w-1.5 rounded-full bg-[#ff6b6b]"></span>
                             </div>
 
-                            {/* Subtle Glowing & Breathing Badge Text */}
                             <motion.span
                                 className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 tracking-wide uppercase"
                                 animate={{
@@ -189,32 +183,100 @@ export default function HeroSection() {
 
                         {/* Action Buttons & Socials */}
                         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 items-center pt-4 justify-center md:justify-start">
-                            {/* Download Resume Button */}
-                            <a
-                                href="/Monir_Hossen_Mern_Resume.pdf"
-                                download="Monir_Hossen_Mern_Resume.pdf"
-                                className="w-full sm:w-auto px-6 py-3 rounded-xl  bg-slate-50 dark:bg-slate-900/60 dark:text-slate-300 text-slate-700 font-medium border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 transition-all hover:bg-slate-50 hover:text-indigo-600 hover:scale-110 dark:hover:bg-slate-800/50 dark:hover:text-indigo-400 active:scale-95 cursor-pointer shadow-sm"
-                            >Resume <FiDownload />
-                            </a>
+                            {/* Trigger Resume Options Modal */}
+                            <button
+                                type="button"
+                                onClick={() => setIsResumeModalOpen(true)}
+                                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 dark:text-slate-300 text-slate-700 font-medium border border-slate-200 dark:border-slate-800 flex items-center justify-center gap-2 transition-all hover:bg-slate-50 hover:text-indigo-600 hover:scale-105 dark:hover:bg-slate-800/50 dark:hover:text-indigo-400 active:scale-95 cursor-pointer shadow-sm"
+                            >
+                                Resume <FiDownload />
+                            </button>
 
                             {/* Social Links */}
                             <div className="flex gap-3">
-                                <a href="https://github.com/CodeByMonir" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="GitHub">
+                                <a href="https://github.com/CodeByMonir" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="GitHub">
                                     <FiGithub size={20} />
                                 </a>
-                                <a href="https://linkedin.com/in/codebymonir" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="LinkedIn">
+                                <a href="https://linkedin.com/in/codebymonir" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="LinkedIn">
                                     <FiLinkedin size={20} />
                                 </a>
-                                <a href="https://facebook.com/moniratmeta" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="Facebook">
+                                <a href="https://facebook.com/moniratmeta" target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm transition-all hover:scale-110" title="Facebook">
                                     <FiFacebook size={20} />
                                 </a>
                             </div>
                         </motion.div>
-
                     </motion.div>
                 </motion.div>
-
             </div>
+
+            {/* Glassmorphism Resume Modal */}
+            {/* Glassmorphism Resume Modal */}
+            <AnimatePresence>
+                {isResumeModalOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsResumeModalOpen(false)}
+                        className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative w-full max-w-sm rounded-3xl p-6 overflow-hidden bg-white/20 dark:bg-slate-900/40 backdrop-blur-xl border border-white/30 dark:border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)]"
+                        >
+                            {/* Subtle Glass Highlight Flares */}
+                            <div className="pointer-events-none absolute -top-24 -left-24 h-48 w-48 rounded-full bg-indigo-500/20 blur-2xl" />
+                            <div className="pointer-events-none absolute -bottom-24 -right-24 h-48 w-48 rounded-full bg-sky-500/20 blur-2xl" />
+
+                            {/* Close Button (z-20 ensures it stays above z-10 content) */}
+                            <button
+                                type="button"
+                                onClick={() => setIsResumeModalOpen(false)}
+                                className="absolute top-4 right-4 z-20 p-1.5 rounded-full bg-white/10 hover:bg-white/20 text-slate-700 dark:text-slate-300 border border-white/20 backdrop-blur-xs transition-colors cursor-pointer"
+                                aria-label="Close modal"
+                            >
+                                <X className="w-4 h-4 pointer-events-none" />
+                            </button>
+
+                            <div className="relative z-10">
+                                <h3 className="text-xl font-bold text-slate-900 dark:text-white tracking-tight mb-1">
+                                    Resume Options
+                                </h3>
+                                <p className="text-sm text-slate-600 dark:text-slate-300/80 mb-6">
+                                    Preview directly in your browser or save a copy offline.
+                                </p>
+
+                                <div className="flex flex-col gap-3">
+                                    {/* View Action */}
+                                    <a
+                                        href={resumePath}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        onClick={() => setIsResumeModalOpen(false)}
+                                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-2xl font-semibold text-white bg-linear-to-r from-indigo-500/80 to-purple-500/80 hover:from-indigo-500 hover:to-purple-500 border border-white/30 shadow-lg shadow-indigo-500/20 backdrop-blur-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+                                    >
+                                        <Eye className="w-4 h-4" /> View Resume
+                                    </a>
+
+                                    {/* Download Action */}
+                                    <a
+                                        href={resumePath}
+                                        download="Monir_Hossen_Mern_Resume.pdf"
+                                        onClick={() => setIsResumeModalOpen(false)}
+                                        className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-2xl font-semibold text-slate-800 dark:text-white bg-white/15 dark:bg-white/5 hover:bg-white/25 dark:hover:bg-white/10 border border-white/30 dark:border-white/15 backdrop-blur-md shadow-sm transition-all hover:scale-[1.02] active:scale-[0.98]"
+                                    >
+                                        <FiDownload className="w-4 h-4" /> Download PDF
+                                    </a>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 }
