@@ -2,7 +2,7 @@ import ColorPaletteManager from '@/component/Features/ColerPaletteManager';
 import React from 'react';
 
 const metadata = {
-    title: 'Colors Palette',
+    title: 'Colors Palette Manager | Monir Hossen | Code By Monir',
     description: 'You can check the colors codes and copy them to use in your projects.',
 };
 
