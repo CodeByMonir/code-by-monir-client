@@ -123,7 +123,7 @@ export default function Navbar() {
                     {/* Brand */}
                     <button
                         onClick={(e) => handleNavigation(e, 'home')}
-                        className="flex items-center gap-2 group text-left cursor-pointer"
+                        className="flex flex-1 items-center gap-2 group text-left cursor-pointer"
                     >
                         <div className="rounded-full border border-white/40 dark:border-white/10 shadow-sm group-hover:scale-105 transition-transform">
                             <Image
@@ -141,7 +141,7 @@ export default function Navbar() {
                     </button>
 
                     {/* Desktop / Tablet Nav */}
-                    <nav className="hidden md:flex items-center gap-1 lg:gap-1.5 px-3 py-1.5 rounded-full bg-white/30 dark:bg-white/5 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_8px_20px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),0_8px_20px_rgba(0,0,0,0.3)]">
+                    <nav className="hidden md:flex md:flex-1 items-center justify-around gap-1 lg:gap-1.5 px-3 py-1.5 rounded-full bg-white/30 dark:bg-white/5 backdrop-blur-2xl border border-white/40 dark:border-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4),0_8px_20px_rgba(0,0,0,0.05)] dark:shadow-[inset_0_1px_1px_rgba(255,255,255,0.08),0_8px_20px_rgba(0,0,0,0.3)]">
                         {navItems.map((item) => {
                             const Icon = item.icon;
                             const isActive = activeSection === item.id;
@@ -165,7 +165,7 @@ export default function Navbar() {
                     </nav>
 
                     {/* Theme Toggle & Mobile Trigger */}
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-1 justify-end items-center gap-2">
                         {!mounted ? (
                             <div className="w-10 h-10 rounded-full bg-white/20 dark:bg-white/5 border border-white/30 dark:border-white/10 animate-pulse" />
                         ) : (
