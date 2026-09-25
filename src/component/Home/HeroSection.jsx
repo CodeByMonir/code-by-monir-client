@@ -96,7 +96,7 @@ export default function HeroSection() {
                                 <Image
                                     src="/MonirHossen_CodeByMonir.webp"
                                     alt="Monir Hossen | Code By Monir | MERN Stack Developer | Full Stack Web Developer"
-                                    keywords="Monir Hossen, Code By Monir, MERN Stack Developer, Full Stack Web Developer, React JS, JavaScript, Tailwind CSS"
+                                    keywords="Monir Hossen | Code By Monir | MERN Stack Developer | Full Stack Web Developer | MongoDB, Express.js, React JS, Next.js, JavaScript, Tailwind CSS"
                                     height={958}
                                     width={958}
                                     className="drop-shadow-2xl w-full h-full object-cover transition-all duration-500 ease-in-out transform hover:scale-105"
