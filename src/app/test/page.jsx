@@ -66,7 +66,7 @@ export default function Preloader({ onFinish }) {
         const globalTimeout = setTimeout(() => {
             setProgress(100);
             handleComplete();
-        }, 7000); // 7-second fallback
+        }, 5000); // 5-second fallback
 
         assets.forEach((src) => {
             const isImage = /\.(webp|jpg|jpeg|png|gif|svg)(\?.*)?$/i.test(src);
