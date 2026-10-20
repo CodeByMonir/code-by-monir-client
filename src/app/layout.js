@@ -52,6 +52,12 @@ export const metadata = {
         height: 630,
         alt: "Monir Hossen Portfolio",
       },
+      {
+        url: "/MonirHossen.webp",
+        width: 958,
+        height: 958,
+        alt: "Monir Hossen - CodeByMonir Profile Picture",
+      },
     ],
     locale: "en_US",
     type: "website",
@@ -78,12 +84,33 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Monir Hossen",
+    alternateName: "CodeByMonir",
+    url: "https://codebymonir.vercel.app",
+    image: "https://codebymonir.vercel.app/MonirHossen.webp",
+    jobTitle: "Full Stack Developer",
+    sameAs: [
+      "https://github.com/CodeByMonir",
+      "https://www.linkedin.com/in/codebymonir",
+    ],
+  };
+
   return (
     <html
       lang="en"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col relative text-slate-900 dark:text-slate-100 bg-slate-100 dark:bg-slate-900 transition-colors duration-500 overflow-x-hidden">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="fixed inset-0 z-0 pointer-events-none">

@@ -24,7 +24,7 @@ export default function Loading() {
           {/* Centered Logo Preview */}
           <div className="absolute p-3 rounded-full bg-white/70 dark:bg-slate-900/80 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-md">
             <Image
-              src="/logo.webp"
+              src="/CodeByMonirLogo.webp"
               alt="CodeByMonir Loading"
               width={48}
               height={48}

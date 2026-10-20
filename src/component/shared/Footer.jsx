@@ -112,7 +112,7 @@ export default function Footer() {
                         <div className="flex items-center gap-2">
                             <div className="w-10 h-10 rounded-full flex items-center justify-center bg-sky-500/15">
                                 <Image
-                                    src="/logo.webp"
+                                    src="/CodeByMonirLogo.webp"
                                     alt="CodeByMonir Logo"
                                     width={40}
                                     height={40}

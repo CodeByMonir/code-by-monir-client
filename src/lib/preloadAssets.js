@@ -1,11 +1,9 @@
 export const assets = [
   "/about-image.webp",
-  "/logo.webp",
-  "/og-image.webp",
-  "/profile.webp",
-  "/robots.txt",
-  "/sitemap-0.xml",
-  "/sitemap.xml",
+  "/CertificateOfMonirHossen.pdf",
+  "/CodeByMonirLogo.webp",
+  "data.json",
   "/Monir_Hossen_Mern_Resume.pdf",
-  "/CertificateOfMonirHossen.pdf"
+  "/MOnirHossen.webp",
+  "/og-image.webp",
 ];

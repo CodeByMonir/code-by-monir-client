@@ -127,11 +127,11 @@ export default function Navbar() {
                     >
                         <div className="rounded-full border border-white/40 dark:border-white/10 shadow-sm group-hover:scale-105 transition-transform">
                             <Image
-                                src="/logo.webp"
+                                src="/CodeByMonirLogo.webp"
                                 alt="CodeByMonir Logo"
                                 width={40}
                                 height={40}
-                                className="w-10 h-10 rounded-full object-contain"
+                                className="rounded-full object-contain"
                             />
                         </div>
                         <span className="text-xl font-bold tracking-tight md:hidden lg:inline-block drop-shadow-sm">
@@ -202,7 +202,7 @@ export default function Navbar() {
                         <div className="flex items-center justify-between pb-3 border-b border-white/20 dark:border-white/10">
                             <div className="flex items-center gap-2">
                                 <Image
-                                    src="/logo.webp"
+                                    src="/CodeByMonirLogo.webp"
                                     alt="CodeByMonir Logo"
                                     width={28}
                                     height={28}
