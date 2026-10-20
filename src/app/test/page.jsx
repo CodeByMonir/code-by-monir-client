@@ -1,8 +1,7 @@
 "use client";
 
 import { assets } from "@/lib/preloadAssets";
-import { useEffect, useState } from "react";
-
+import { useEffect, useState, useRef } from "react";
 
 const phrases = [
     "Crafting pixels...",
@@ -14,19 +13,42 @@ const phrases = [
 export default function Preloader({ onFinish }) {
     const [progress, setProgress] = useState(0);
     const [phraseIndex, setPhraseIndex] = useState(0);
+    const onFinishRef = useRef(onFinish);
+
+    // Keep latest onFinish without causing useEffect to re-run
+    useEffect(() => {
+        onFinishRef.current = onFinish;
+    }, [onFinish]);
 
     useEffect(() => {
-        let loadedCount = 0;
         const totalAssets = assets.length;
 
         if (totalAssets === 0) {
-            if (onFinish) onFinish();
+            if (onFinishRef.current) onFinishRef.current();
             return;
         }
 
+        let loadedCount = 0;
+        let isFinished = false;
+
+        // Prevent garbage collection on mobile WebKit/Blink
+        const imageHolder = [];
+
+        const handleComplete = () => {
+            if (isFinished) return;
+            isFinished = true;
+            imageHolder.length = 0; // Release references
+            if (onFinishRef.current) onFinishRef.current();
+        };
+
         const updateProgress = () => {
+            if (isFinished) return;
+
             loadedCount += 1;
-            const currentProgress = Math.round((loadedCount / totalAssets) * 100);
+            const currentProgress = Math.min(
+                100,
+                Math.round((loadedCount / totalAssets) * 100)
+            );
             setProgress(currentProgress);
 
             const nextPhraseIndex = Math.min(
@@ -35,28 +57,53 @@ export default function Preloader({ onFinish }) {
             );
             setPhraseIndex(nextPhraseIndex);
 
-            if (loadedCount === totalAssets) {
-                setTimeout(() => {
-                    if (onFinish) onFinish();
-                }, 600);
+            if (loadedCount >= totalAssets) {
+                setTimeout(handleComplete, 400);
             }
         };
 
+        // Global fallback: Ensure mobile users are never stuck indefinitely
+        const globalTimeout = setTimeout(() => {
+            setProgress(100);
+            handleComplete();
+        }, 7000); // 7-second fallback
+
         assets.forEach((src) => {
-            const isImage = /\.(webp|jpg|jpeg|png|gif|svg)$/i.test(src);
+            const isImage = /\.(webp|jpg|jpeg|png|gif|svg)(\?.*)?$/i.test(src);
 
             if (isImage) {
                 const img = new Image();
-                img.src = src;
+                imageHolder.push(img);
+
                 img.onload = updateProgress;
                 img.onerror = updateProgress;
+                img.src = src;
+
+                // If the browser already has it cached, complete immediately
+                if (img.complete) {
+                    updateProgress();
+                }
             } else {
-                fetch(src, { method: "HEAD" })
-                    .then(updateProgress)
-                    .catch(updateProgress);
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 4000);
+
+                fetch(src, { method: "HEAD", signal: controller.signal })
+                    .then(() => {
+                        clearTimeout(timeoutId);
+                        updateProgress();
+                    })
+                    .catch(() => {
+                        clearTimeout(timeoutId);
+                        updateProgress();
+                    });
             }
         });
-    }, [onFinish]);
+
+        return () => {
+            clearTimeout(globalTimeout);
+            imageHolder.length = 0;
+        };
+    }, []);
 
     return (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-between bg-slate-900 px-6 py-12 text-slate-100">
